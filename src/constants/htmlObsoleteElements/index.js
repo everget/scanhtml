@@ -1,0 +1,45 @@
+/**
+ * https://www.w3.org/TR/html5/obsolete.html#obsolete
+ * https://www.w3.org/TR/html52/changes.html#features-removed
+ * https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Obsolete_and_deprecated_elements
+ */
+
+export const htmlObsoleteElements = [
+	'acronym',
+	'applet',
+	'basefont',
+	'bgsound',
+	'big',
+	'blink',
+	'center',
+	'command',
+	'content',
+	'dir',
+	'element',
+	'font',
+	'frame',
+	'frameset',
+	// 'hgroup',
+	'image',
+	'isindex',
+	'keygen',
+	'listing',
+	'marquee',
+	// 'menu',
+	'menuitem',
+	'multicol',
+	'nextid',
+	'nobr',
+	'noembed',
+	'noframes',
+	'plaintext',
+	'rb',
+	's',
+	'shadow',
+	'spacer',
+	'strike',
+	'tt',
+	'u',
+	'wbr',
+	'xmp',
+];
