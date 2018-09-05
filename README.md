@@ -1,6 +1,7 @@
 # scanhtml
 
 :bar_chart: A robust HTML file statistics collector, analyzer and validator
+
 [![Build Status](https://travis-ci.org/everget/scanhtml.svg?branch=master)](https://travis-ci.org/everget/scanhtml) [![Build status](https://ci.appveyor.com/api/projects/status/dl88bnkepmy3blwr/branch/master?svg=true)](https://ci.appveyor.com/project/everget/scanhtml/branch/master) [![codecov](https://codecov.io/gh/everget/scanhtml/branch/master/graph/badge.svg)](https://codecov.io/gh/everget/scanhtml) [![Coverage Status](https://coveralls.io/repos/github/everget/scanhtml/badge.svg?branch=master)](https://coveralls.io/github/everget/scanhtml?branch=master)
 
 [![CodeFactor](https://www.codefactor.io/repository/github/everget/scanhtml/badge)](https://www.codefactor.io/repository/github/everget/scanhtml) [![codebeat badge](https://codebeat.co/badges/b930dfd0-6922-4750-b32c-9f8fdcccb0f6)](https://codebeat.co/projects/github-com-everget-scanhtml-master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/81c450c367f14b6ea8430a0ad348429c)](https://www.codacy.com/project/coriolan61/scanhtml/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=everget/scanhtml&amp;utm_campaign=Badge_Grade_Dashboard) [![BCH compliance](https://bettercodehub.com/edge/badge/everget/scanhtml?branch=master)](https://bettercodehub.com/)
@@ -54,7 +55,16 @@ import scanhtml from 'scanhtml';
 // or const scanhtml = require('scanhtml');
 
 const html = `
-
+<!doctype html>
+<html>
+	<head>
+		<title>A Simple HTML Document</title>
+	</head>
+	<body>
+		<p>This is a very simple HTML document</p>
+		<p>It only has two paragraphs</p>
+	</body>
+</html>
 `;
 
 // Switching off some metrics
