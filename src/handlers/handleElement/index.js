@@ -1,8 +1,9 @@
+import mathmlElements from 'mathml-tag-names';
+import htmlSvgElements from 'svg-tag-names';
+
 import { htmlElements } from '../../constants/htmlElements';
 import { htmlVoidElements } from '../../constants/htmlVoidElements';
 import { htmlObsoleteElements } from '../../constants/htmlObsoleteElements';
-import { htmlSvgElements } from '../../constants/htmlSvgElements';
-import { mathmlElements } from '../../constants/mathmlElements';
 import { countUsage } from '../../calculators/countUsage';
 
 export function handleElement(node, report, options) {
@@ -33,7 +34,6 @@ export function handleElement(node, report, options) {
 		return;
 	}
 
-	// https://github.com/stylelint/stylelint/blob/master/lib/utils/isCustomElement.js
 	if (
 		htmlElements.includes(node.tag) === false &&
 		htmlObsoleteElements.includes(node.tag) === false &&

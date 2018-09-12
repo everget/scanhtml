@@ -72,7 +72,11 @@ export function getEmptyReport() {
 				unique: 0,
 				usage: {},
 				valuesUsage: {},
-				invalid: {},
+				invalid: {
+					total: 0,
+					unique: 0,
+					usage: {},
+				},
 			},
 			aria: {
 				total: 0,

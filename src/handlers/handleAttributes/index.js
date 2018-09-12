@@ -1,7 +1,6 @@
+import htmlAriaAttributes from 'aria-attributes';
+
 import { htmlGlobalAttributes } from '../../constants/htmlGlobalAttributes';
-import { htmlAriaAttributes } from '../../constants/htmlAriaAttributes';
-import { htmlObsoleteAttributes } from '../../constants/htmlObsoleteAttributes';
-import { htmlSvgAttributes } from '../../constants/htmlSvgAttributes';
 import { countUsage } from '../../calculators/countUsage';
 
 function countGlobalAttributes(attr, report) {
@@ -73,13 +72,13 @@ export function handleAttributes(node, report, options) {
 			}
 
 			// TODO
-			if (htmlSvgAttributes.includes(attr) && options.svgAttributes) {
-				countSvgAttributes(attr, node.attrs, report);
-			}
+			// if (htmlSvgAttributes.includes(attr) && options.svgAttributes) {
+			// 	countSvgAttributes(attr, node.attrs, report);
+			// }
 
 			// TODO
-			if (htmlObsoleteAttributes.includes(attr) && options.obsoleteAttributes) {
-				countObsoleteAttributes(attr, node.attrs, report);
-			}
+			// if (htmlObsoleteAttributes.includes(attr) && options.obsoleteAttributes) {
+			// 	countObsoleteAttributes(attr, node.attrs, report);
+			// }
 		});
 }
