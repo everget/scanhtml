@@ -1,6 +1,52 @@
 {
-	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": [
-		"config:recommended"
-	]
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:recommended"
+    ],
+    "packageManagers": [
+        "npm",
+        "pnpm",
+        "yarn"
+    ],
+    "lockFileMaintenance": {
+        "enabled": true,
+        "automerge": true,
+        "recreateClosed": true
+    },
+    "packageRules": [
+        {
+            "matchUpdateTypes": [
+                "minor",
+                "patch",
+                "pin"
+            ],
+            "automerge": true,
+            "automergeType": "branch",
+            "updateLockFiles": true
+        },
+        {
+            "matchFileTypes": [
+                "package-lock.json",
+                "yarn.lock",
+                "pnpm-lock.yaml"
+            ],
+            "automerge": true
+        }
+    ],
+    "npm": {
+        "rangeStrategy": "bump"
+    },
+    "automergeStrategy": "squash",
+    "platformAutomerge": true,
+    "labels": [
+        "dependencies"
+    ],
+    "semanticCommits": "enabled",
+    "commitMessagePrefix": "chore(deps):",
+    "assignees": [
+        "your-github-username"
+    ],
+    "schedule": [
+        "every weekend"
+    ]
 }
